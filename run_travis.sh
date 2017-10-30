@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-python scrap_indeed > /dev/null &
+python scrap_indeed.py > /dev/null &
 nosetests --with-coverage
