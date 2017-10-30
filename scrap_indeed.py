@@ -101,7 +101,9 @@ for city in city_set:
       #grabbing summary text
       d = div.findAll('span', attrs={'class': 'summary'}) 
       for span in d:
-        job_post.append(span.text.strip()) 
+        content = [x.strip() for x in span.text]      #remove new line in summary
+        content = ''.join(content)
+        job_post.append(content.strip()) 
       #grabbing salary
       try:
         job_post.append(div.find('nobr').text) 
