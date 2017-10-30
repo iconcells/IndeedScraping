@@ -1,4 +1,10 @@
+language: python
 python:
-  - "3.6.2"
-install: pip install -r requirements.txt
+  - "3.5"
+  - "3.6"
+  #PyPy version
+  - "pypy3" # Pypy3 2.4.0
+  - "pypy-5.3.1"
+install: 
+  - pip install -r requirements.txt
 script: sh run_travis.sh
